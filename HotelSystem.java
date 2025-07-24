@@ -81,19 +81,4 @@ public class HotelSystem {
         
         return String.format("料金合計: %,d 円\nチェックアウト処理が完了し、予約情報は削除されました。", totalPrice);
     }
-
-    /* public String cancelReservation(String reservationNumber) {
-        Reservation res = findReservation(reservationNumber);
-        if (res == null) {
-            return "エラー: その予約番号は見つかりません。";
-        }
-        if (res.getStatus() != Reservation.ReservationStatus.BOOKED) {
-            return "エラー: チェックイン済みの予約はキャンセルできません。";
-        }
-
-        RoomType type = res.getRoomType();
-        type.increaseAvailability(res.getCheckInDate(), res.getCheckOutDate(), res.getNumberOfRooms());
-        reservations.remove(reservationNumber);
-        return "予約番号: " + reservationNumber + " の予約をキャンセルしました。";
-    } */
 }
